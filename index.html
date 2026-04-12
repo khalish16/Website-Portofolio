@@ -4,59 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khalish Aufa · Beranda</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Navigasi -->
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">NA</a>
-            <ul>
-                <li><a href="index.html" class="active">Beranda</a></li>
-                <li><a href="about.html">Tentang</a></li>
-            </ul>
+<body class="bg-light">
+
+    <!-- Navigasi Bootstrap -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">
+                <span class="text-primary">KA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-medium" aria-current="page" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Tentang</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Konten Utama -->
-    <main>
+    <main class="py-5">
         <div class="container">
-            <!-- Profile Section dengan Foto, Nama, NPM -->
-            <div class="profile-card">
-                <div class="profile-img-wrapper">
-                    <img src="fotosaya.png" alt="Foto Khalish" class="profile-img">
-                </div>
-                <div class="profile-info">
-                    <h1 class="nama">Khalish Aufa</h1>
-                    <div class="npm-badge">NPM: 2408107010068</div>
-                    <p class="bio">Mahasiswa Informatika · Semester 4</p>
+            <!-- Profile Section dengan Grid Bootstrap -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card border-0 shadow-lg overflow-hidden">
+                        <div class="row g-0 align-items-center p-4">
+                            <!-- Foto -->
+                            <div class="col-sm-4 text-center text-sm-start mb-3 mb-sm-0">
+                                <div class="profile-img-wrapper mx-auto mx-sm-0">
+                                    <img src="fotosaya.png" alt="Foto Khalish" class="img-fluid rounded-circle border border-4 border-white shadow">
+                                </div>
+                            </div>
+                            <!-- Info -->
+                            <div class="col-sm-8 text-center text-sm-start">
+                                <h1 class="display-6 fw-bold mb-1">Khalish Aufa</h1>
+                                <div class="mb-2">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill fw-medium">NPM: 2408107010068</span>
+                                </div>
+                                <p class="text-secondary mb-0">
+                                    <i class="bi bi-laptop me-1"></i> Mahasiswa Informatika · Semester 4
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- List Data 1: Hobi & Minat -->
-            <div class="card">
-                <h2 class="card-title">✨ Hobi & Minat</h2>
-                <ul class="custom-list">
-                    <li>Membaca buku fiksi & self-development</li>
-                    <li>Berenang dan hiking</li>
-                    <li>Fotografi</li>
-                    <li>Mendengarkan podcast teknologi</li>
-                </ul>
-            </div>
+            <!-- Dua Card List Data: Grid System Bootstrap -->
+            <div class="row g-4">
+                <!-- Hobi & Minat -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow transition">
+                        <div class="card-body p-4">
+                            <h2 class="card-title h4 mb-4 pb-2 border-bottom border-primary border-2 d-inline-block">
+                                <i class="bi bi-heart-fill text-primary me-2"></i>✨ Hobi & Minat
+                            </h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item ps-0 bg-transparent border-light">
+                                    <i class="bi bi-book me-2 text-primary"></i> Membaca buku fiksi & self-development
+                                </li>
+                                <li class="list-group-item ps-0 bg-transparent border-light">
+                                    <i class="bi bi-water me-2 text-primary"></i> Berenang dan hiking
+                                </li>
+                                <li class="list-group-item ps-0 bg-transparent border-light">
+                                    <i class="bi bi-camera me-2 text-primary"></i> Fotografi
+                                </li>
+                                <li class="list-group-item ps-0 bg-transparent border-light">
+                                    <i class="bi bi-mic me-2 text-primary"></i> Mendengarkan podcast teknologi
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- List Data 2: Skill Favorit -->
-            <div class="card">
-                <h2 class="card-title">🎯 Skill Favorit</h2>
-                <ol class="custom-list ordered">
-                    <li>UI/UX Design</li>
-                    <li>Front-end Basic (HTML, CSS)</li>
-                </ol>
+                <!-- Skill Favorit -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow transition">
+                        <div class="card-body p-4">
+                            <h2 class="card-title h4 mb-4 pb-2 border-bottom border-success border-2 d-inline-block">
+                                <i class="bi bi-code-slash text-success me-2"></i>🎯 Skill Favorit
+                            </h2>
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item d-flex justify-content-between align-items-start bg-transparent border-light">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">UI/UX Design</div>
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">Figma</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start bg-transparent border-light">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Front-end Basic</div>
+                                    </div>
+                                    <span class="badge bg-success rounded-pill">HTML/CSS</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer>
-        <p>© 2026 Khalish Aufa · Personal Website</p>
+    <!-- Footer Bootstrap -->
+    <footer class="bg-white text-center py-4 mt-auto border-top">
+        <div class="container">
+            <p class="text-secondary mb-0">
+                <i class="bi bi-c-circle me-1"></i> 2026 Khalish Aufa · Personal Website
+            </p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
